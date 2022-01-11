@@ -1,4 +1,3 @@
-import './App.css'
 import { useState, useEffect } from 'react'
 
 function App() {
@@ -42,14 +41,18 @@ function App() {
 
   return (
     <div className="App">
-      <h1>User Choice: {userChoice}</h1>
-      <h1>Computer Choice: {computerChoice}</h1>
-      <h4>{result}</h4>
+      <h1>Rock Paper Scissors Game</h1>
+      <h2>User Choice: <span>{userChoice}</span></h2>
+      <h2>Computer Choice: <span>{computerChoice}</span></h2>
+      
       {choices.map((choice, index) => (
         <button key={index} onClick={() => handleClick(choice)}>
           {choice}
         </button>
       ))}
+ 
+      <span>{result}</span>
+
     </div>
   )
 }
